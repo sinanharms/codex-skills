@@ -65,6 +65,8 @@ Codex discovers skills from this directory automatically when it is installed as
 Invoke a skill by name when you want its workflow, for example:
 
 ```text
+${skill_name}
+or like this:
 Use lazy-dev before this refactor.
 Use python-review on this module.
 Use init-python-project to create a new uv project.
@@ -88,13 +90,3 @@ When editing a skill:
 2. Put large examples, templates, and references in subdirectories.
 3. Update `gotchas.md` when a skill misses an important edge case.
 4. Avoid adding dependencies or generated files unless the skill needs them.
-
-## Git Remote
-
-This repo is currently configured to push through a personal GitHub SSH alias:
-
-```text
-origin  git@github-personal:sinanharms/codex-skills.git
-```
-
-The `github-personal` host alias should point at the personal SSH key in `~/.ssh/config`.
