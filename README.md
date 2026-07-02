@@ -75,6 +75,12 @@ Use init-python-project to create a new uv project.
 
 Skill instructions are in each `SKILL.md`. Supporting files are intentionally local to the skill that needs them.
 
+### Python review
+
+Use `python-review` for maintainability reviews of Python modules, especially OOP/service boundaries, dependency injection, Pydantic models, settings, and refactor direction. For broader reviews it can fan out read-only subagents for architecture, data/config, tests/tooling, caller flow, and lazy-dev boilerplate checks, then merge those findings into one recommendation.
+
+Reviews should finish with a recommended implementation plan and ask whether to implement it, verify it first, or revise the plan.
+
 ## Maintenance
 
 No build step is required for this repo. Useful checks:
