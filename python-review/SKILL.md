@@ -26,6 +26,12 @@ Inspect the code path, callers, tests, and project tooling before giving design 
 
 If the user's goal is ambiguous, ask one focused question. When options are clearer than an open question, present 2-3 choices and mark the recommended path.
 
+## Phase 0.5 — Parallel Review
+
+For non-trivial reviews, read `references/subagent-review.md` and dispatch focused read-only subagents before writing findings. Use subagents when the review spans multiple files, shared architecture, unclear callers, OOP/DI boundaries, Pydantic/settings, tests/tooling, or boilerplate/YAGNI risk.
+
+Skip subagents for small single-file reviews unless the user explicitly asks for a deep review.
+
 ## Phase 1 — Review Design
 
 Read `references/review-rubric.md` for the review criteria. Separate findings into must-fix correctness/maintainability issues, useful refactor candidates, and taste-only suggestions.

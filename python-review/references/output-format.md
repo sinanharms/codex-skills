@@ -22,6 +22,22 @@ Findings:
 
 Include code only when it makes the recommendation clearer.
 
+## After Review
+
+After the review findings, always write a short implementation plan for the recommended changes before asking for action:
+
+```text
+Recommended implementation plan:
+1. <smallest concrete change>
+2. <next concrete change, if needed>
+```
+
+Then ask the user whether to implement that plan, verify it first, or change parts of it.
+
+If the user wants to change the plan, ask whether they have specific edits, want a different recommendation, or want to brainstorm alternatives.
+
+If the user wants to brainstorm, invoke `superpowers:brainstorming` before revising the plan.
+
 ## Questions
 
 Never ask bulk question lists.
