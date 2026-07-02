@@ -15,6 +15,7 @@ This repository is meant to live at `~/.codex/skills`. Each top-level directory 
 | `docs-scaffold` | Split raw project docs into structured, cross-linked documentation. |
 | `init-python-project` | Scaffold a minimal `uv` Python project after collecting required inputs. |
 | `create-app-context` | Scaffold Python settings, application context, boundaries, wiring, and tests from local project patterns. |
+| `skill-builder` | Create well-structured skills with progressive disclosure and templates. |
 
 ## Layout
 
@@ -48,6 +49,11 @@ This repository is meant to live at `~/.codex/skills`. Each top-level directory 
 |   +-- SKILL.md
 |   +-- gotchas.md
 |   +-- references/
++-- skill-builder/
+|   +-- SKILL.md
+|   +-- examples/
+|   +-- references/
+|   +-- templates/
 ```
 
 The `.system/` directory contains system-managed skills and is not the main content of this repo.
