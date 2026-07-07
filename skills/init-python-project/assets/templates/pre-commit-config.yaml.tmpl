@@ -18,15 +18,15 @@ repos:
         name: ruff-check-strict
         args: [--no-fix]
 
-- repo: https://github.com/astral-sh/ty-pre-commit
-  rev: v0.0.55
-  hooks:
-    - id: ty
-      name: ty check
-      entry: ty check .
-      language: python
-      pass_filenames: false
-      types: [python]
+-   repo: https://github.com/astral-sh/ty-pre-commit
+    rev: v0.0.55
+    hooks:
+        - id: ty
+        name: ty check
+        entry: ty check .
+        language: python
+        pass_filenames: false
+        types: [python]
 
 -   repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.10.3
