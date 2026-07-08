@@ -16,8 +16,9 @@ Create a minimal Python project that follows this repo's tooling conventions: `u
 3. Create the minimal layout shown in `examples/example-layout.md`.
 4. Write files from `assets/templates/`, replacing placeholders with the user's answers. Place `test_smoke.py.tmpl` at `tests/test_smoke.py` in the repo root.
 5. Run `uv sync` to create/update `.venv` and `uv.lock` when the user allows dependency resolution.
-6. Run `uv run pre-commit install` only when the user asks to install hooks.
-7. Verify with `uv run ruff format --check .`, `uv run ruff check .`, `uv run ty check .`, and `uv run pytest` when dependencies are installed.
+6. If the destination is not already a Git repository and the user wants hooks, run `git init` in the project root before installing hooks.
+7. Run `uv run pre-commit install` only when the user asks to install hooks.
+8. Verify with `uv run ruff format --check .`, `uv run ruff check .`, `uv run ty check .`, and `uv run pytest` when dependencies are installed.
 
 ## Required Inputs
 
@@ -34,6 +35,11 @@ Do not generate the project until these are known:
 - whether to install pre-commit hooks
 
 Use the defaults in `references/user-input.md` when the user wants the same setup as this repo.
+
+## Gotchas
+
+- Current workflow does not create a Git repository by itself.
+- `uv run pre-commit install` fails outside a Git repo. If hooks were requested, initialize Git first with `git init` unless the target is already inside an existing repo.
 
 ## Resources
 
