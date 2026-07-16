@@ -19,14 +19,9 @@ repos:
         args: [--no-fix]
 
 -   repo: https://github.com/astral-sh/ty-pre-commit
-    rev: v0.0.55
+    rev: v0.0.59
     hooks:
-        - id: ty
-        name: ty check
-        entry: ty check .
-        language: python
-        pass_filenames: false
-        types: [python]
+      - id: ty
 
 -   repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.10.3

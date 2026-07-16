@@ -19,6 +19,7 @@ Create a minimal Python project that follows this repo's tooling conventions: `u
 6. If the destination is not already a Git repository and the user wants hooks, run `git init` in the project root before installing hooks.
 7. Run `uv run pre-commit install` only when the user asks to install hooks.
 8. Verify with `uv run ruff format --check .`, `uv run ruff check .`, `uv run ty check .`, and `uv run pytest` when dependencies are installed.
+9. When pre-commit hooks are installed, run `uv run pre-commit run --all-files` before finishing. This validates hook YAML and catches missing hook executables before the first commit.
 
 ## Required Inputs
 
